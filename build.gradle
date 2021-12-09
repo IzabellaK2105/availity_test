@@ -1,0 +1,99 @@
+buildscript {
+	repositories {
+	    ivy {
+  	        url  "${artifactory_contextUrl}" 
+	    	patternLayout {
+	                ivy  "dev/[organization]/[module]/[revision]/[type]s/ivy-[revision].xml" 
+	                artifact  "dev/[organization]/[module]/[revision]/[type]s/[module](-[classifier])-[revision].[ext]" 
+
+	                ivy "dev-tools/[organization]/[module]/[revision]/[type]s/ivy-[revision].xml" 
+	                artifact "dev-tools/[organization]/[module]/[revision]/[type]s/[module](-[classifier])-[revision].[ext]" 
+
+	                ivy "dev-external-libs/[organization]/[module]/[revision]/[type]s/ivy-[revision].xml" 
+	                artifact  "dev-external-libs/[organization]/[module]/[revision]/[type]s/[module](-[classifier])-[revision].[ext]"
+	        } 
+	    }    
+	}
+  dependencies {
+    classpath "org.springframework.boot:spring-boot-gradle-plugin:2.1.5.RELEASE"
+  }
+}
+
+
+plugins {
+	id 'java-library'
+    id 'eclipse'	
+}
+
+
+apply plugin: "org.springframework.boot"
+
+archivesBaseName='taa-migration'
+group = 'mil.navy.financial.taa.data.migration'
+version = '1.0.0'
+sourceCompatibility = '1.8'
+
+
+repositories {
+	    ivy {
+  	        url  "${artifactory_contextUrl}" 
+	    	patternLayout {
+	                ivy  'dev/[organization]/[module]/[revision]/[type]s/ivy-[revision].xml' 
+	                artifact  'dev/[organization]/[module]/[revision]/[type]s/[module](-[classifier])-[revision].[ext]' 
+
+	                ivy 'dev-tools/[organization]/[module]/[revision]/[type]s/ivy-[revision].xml' 
+	                artifact 'dev-tools/[organization]/[module]/[revision]/[type]s/[module](-[classifier])-[revision].[ext]' 
+
+	                ivy 'dev-external-libs/[organization]/[module]/[revision]/[type]s/ivy-[revision].xml' 
+	                artifact  'dev-external-libs/[organization]/[module]/[revision]/[type]s/[module](-[classifier])-[revision].[ext]'
+	        } 
+	    }    
+   
+}
+
+ext {
+	set('springBootVersion', "2.4.2")
+	set('swaggerVersion', "2.9.2")	
+	set('ndmsFrameworkVersion',"1.5.3+")
+	set('springKafkaVersion', "2.6.5")
+	set('springCloudStreamVersion', "3.1.1")
+
+}
+
+bootJar {
+	
+}
+dependencies {
+	compileOnly 'org.projectlombok:lombok:1.18.8'
+	
+	annotationProcessor(group: 'org.projectlombok', name: 'lombok', version: '1.18.8')    
+	
+	implementation ( group: 'org.apache.commons', name: 'commons-lang3', version: '3.11' )	
+	
+    
+    implementation('net.bytebuddy:byte-buddy:1.9.12') {
+        force = true
+    }
+    testImplementation('net.bytebuddy:byte-buddy-agent:1.9.12') {
+        force = true
+    }	  
+    
+    implementation('org.apache.httpcomponents:httpcore:4.4.9') {
+        force = true
+    }
+    testImplementation( 'org.apache.httpcomponents:httpcore:4.4.9') {
+        force = true
+    }	
+    
+    // start  added for deployment dependencies
+    implementation (group: 'javax.xml.bind', name: 'jaxb-api', version: '2.1') {
+    exclude (group: '*')
+    
+    }
+    
+    // end added for deployment dependencies
+  
+}
+
+
+

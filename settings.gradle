@@ -1,0 +1,24 @@
+pluginManagement {
+	repositories {
+	      maven {
+  	        url  "${artifactory_contextUrl}" + '/gradle-build-plugins'
+
+        }
+	    ivy {
+  	        url  "${artifactory_contextUrl}" 
+	    	patternLayout {
+	                ivy  "dev/[organization]/[module]/[revision]/[type]s/ivy-[revision].xml" 
+	                artifact  "dev/[organization]/[module]/[revision]/[type]s/[module](-[classifier])-[revision].[ext]" 
+
+	                ivy "dev-tools/[organization]/[module]/[revision]/[type]s/ivy-[revision].xml" 
+	                artifact "dev-tools/[organization]/[module]/[revision]/[type]s/[module](-[classifier])-[revision].[ext]" 
+
+	                ivy "dev-external-libs/[organization]/[module]/[revision]/[type]s/ivy-[revision].xml" 
+	                artifact  "dev-external-libs/[organization]/[module]/[revision]/[type]s/[module](-[classifier])-[revision].[ext]"
+	        } 
+	    }    
+	}
+}
+include ':testprod' 
+project (':testprod').projectDir = new File ('testprod')
+

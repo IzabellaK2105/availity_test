@@ -1,0 +1,13 @@
+*.class
+*.launch
+*_gen.sql
+.metadata/
+bin/
+build/
+classes/
+deploy/
+dist/
+gencode/
+gwt-unitCache/
+test-classes/
+user.properties
