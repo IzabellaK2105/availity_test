@@ -1,0 +1,38 @@
+
+1. Tell me about your proudest professional achievement. It can also be a personal or school project.
+
+One of my greatest accomplishments is finishing a series of online courses that allowed me better myself as a professional and 
+use my newfound knowledge at my workplace. One of the examples is that I took a course in Kafka Streaming that allowed me 
+to then implement Kafka Messaging in Cucumber Framework Tests environment That has never been created before by anyone. 
+Another course that I took was "Docker and Kubernetes. Practical guide". That allowed me to understand in depth how microservices 
+could be deployed to different environments. I then implemented this knowledge in my last project. It was a big success. 
+Our employer allowed us to have up to 10% errors when moving data from the old Oracle database to the newarest one, utilizing 
+microservices. In reality, the microservices written by me showed only 2 to 3% of errors, and all of them were data based. 
+
+2. Tell me about something you have read recently that you would recommend and why. (Can be a Github Repo,
+   Article, Blog, Book, etc.)
+   
+https://journals.sagepub.com/doi/full/10.1177/0020764020922269
+
+One of the most helpful articles that I have read is “Social isolation in Covid-19: The impact of loneliness”. 
+Just like many people I am a social being. I’m used to being around people, working in a team environment and communicating 
+face to face on a daily basis. 
+When Covid first hit, like many, I struggled with isolation. I didn’t know what to do with myself, and I began to experience 
+anxiety and depression. I wasn’t used to not being around people, not being able to talk or share. That’s when I found this 
+wonderful article. It gave me a much needed understanding of what I was experiencing. It discussed strategies on coping 
+mechanisms, allowed me to understand that life goes on and we have to try and adjust to the new reality to the best out our 
+ability. Most importantly it showed me that I was not alone. I read about the different experiences that people all around 
+the world were having with Covid isolation and I knew that there was hope. A way to move forward. It gave me strength to learn 
+how to do new things, to study new programming approaches, develop new skills. It motivated me to better myself and helped me 
+to continue working in this new Covid environment. I am now a better person for it. 
+
+
+3. How would you explain to your grandmother what Availity does ?
+
+Avality is a service that helps manage healthcare online. There are many doctors and many different insurances in the US. 
+Avality connects your doctors with your insurance company. It lets your doctor’s offices check what insurance benefits you have,
+what is covered by your plan, and how much you would need to pay for different services. It allows the healthcare providers 
+to check your claims, if you owe any money for previous visits, procedures, etc. It lets your doctor know how much you owe 
+and what services you were billed for. It also shows if any authorizations are needed (electronic or paper-based documents that 
+medical offices have to fill out if a certain service, medication, etc. is needed in case your insurance doesn’t cover it, only 
+covers a portion, or the copayment is very high).
